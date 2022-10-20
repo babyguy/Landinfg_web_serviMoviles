@@ -1,0 +1,561 @@
+/* ----------------------global---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: var(--my-background);
+}
+
+/* ----------------------pallete colors---------------------- */
+:root {
+  /* link pallet */
+  /* https://colors.muz.li/palette/8a2be2/4a1e9e/ddcbff/bb98ff/ffffff */
+  --my-background: #edecec;
+  --my-shadow: #333;
+  --my-strong: #4a1e9e;
+  --my-hover: #340c5a;
+  --my-textLigth: #ddcbff;
+}
+
+/* ----------------------nabvar css---------------------- */
+#button {
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  left: 90px;
+  display: none;
+}
+.navigation_burger {
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger {
+  color: var(--my-textLigth);
+  font-size: 2em;
+}
+/* ___________ */
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-style: normal;
+  list-style: none;
+  display: flex;
+  padding: 15px;
+  justify-content: end;
+  background-color: var(--my-strong);
+  box-shadow: 0px 5px 10px 0px var(--my-background);
+  opacity: 0.9;
+  order: 10;
+}
+
+.navbar li a {
+  color: var(--my-textLigth);
+  padding: 10px 10px;
+  background-color: none;
+  text-decoration: solid;
+  font-size: 1em;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: all 0.6s;
+}
+
+/* ----------------------divider---------------------- */
+.mid {
+  height: 1px;
+  width: 60%;
+  border-bottom: 1px solid var(--my-strong);
+  position: relative;
+  left: 20%;
+  opacity: 0.5;
+}
+
+/* ----------------------botones---------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.2em 1em;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  font-weight: small;
+  font-size: 1.5rem;
+}
+
+/*input output effect buttons */
+
+.btn-primary {
+  color: var(--my-textLigth);
+  background-color: var(--my-strong);
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--my-hover);
+  transition: background 0.3s ease-in-out;
+}
+
+/* ----------------------showcase styles----------------------  */
+
+.showcase-area {
+  height: 70vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url(./resources/backgraund.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 3rem;
+}
+
+.main-title {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--my-strong);
+  text-shadow: 0 0 10px var(--my-textLigth);
+  transform: translate(-150%);
+  animation: about-Text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-Text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ----------------------global sections rules---------------------- */
+/* containers */
+.hardware-container,
+.sofware-container,
+.devices-container,
+.accessories-container,
+.contact-container {
+  display: flex;
+  padding: 20px;
+}
+
+/* containers div */
+.hardware-container div,
+.sofware-container div,
+.devices-container div,
+.accessories-container div,
+.contact-container div {
+  display: inline-flex;
+  margin: auto;
+}
+
+/* img sections */
+#hardwareImg,
+#sofwareImg,
+#devicesImg,
+#accessoriesImg {
+  height: 500px;
+  width: 50%;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px var(--my-shadow);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#hardwareImg:hover,
+#sofwareImg:hover,
+#devicesImg:hover,
+#accessoriesImg:hover {
+  opacity: 0.9;
+  box-shadow: 0px 0px 20px var(--my-strong);
+}
+/* text sections */
+#hardwareText,
+#sofwareText,
+#devicesText,
+#accessoriesText,
+#contact-text {
+  height: 500px;
+  width: 35%;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+/* titles */
+.title {
+  font-size: 3rem;
+  color: var(--my-strong);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* list´s */
+.list {
+  margin-top: 0.8rem;
+  list-style: none;
+}
+
+/* ----------------------hardware---------------------- */
+
+/* imagen de hardare seccion */
+#hardwareImg {
+  background-image: url(./resources/hardware.jpg);
+}
+
+/* ----------------------sofware---------------------- */
+
+#sofwareImg {
+  background-image: url(./resources/sofware.svg);
+}
+
+/* ----------------------devices---------------------- */
+
+#devicesImg {
+  background-image: url(./resources/devices.jpg);
+}
+#devicesText {
+  justify-content: flex-start;
+}
+/* ----------------------accessories---------------------- */
+
+#accessoriesImg {
+  background-image: url(./resources/accesories.jpg);
+  background-position: top;
+}
+/* ----------------------form---------------------- */
+
+.title-contact {
+  margin-top: 1rem;
+}
+
+/* imagen */
+#contactImg {
+  height: 500px;
+  width: 50%;
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(./resources/contact.svg);
+}
+
+.name,
+.tel,
+.email {
+  width: 90%;
+  height: 60px;
+  background: var(--my-background);
+  border: 2px solid var(--my-strong);
+  border-radius: 20px;
+}
+
+.name input,
+.tel input,
+.email input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  background: none;
+  padding: 0 2em;
+  outline: none;
+  font-size: 1rem;
+  padding-right: 80px;
+  color: var(--my-hover);
+
+}
+
+.name:hover,
+.tel:hover,
+.email:hover,
+.btn-enviar:hover,
+.info:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px var(--my-shadow);
+}
+.info {
+  width: 90%;
+  background: var(--my-background);
+  border: 2px solid var(--my-strong);
+  border-radius: 20px;
+}
+
+.info textarea {
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 10px 2em;
+  outline: none;
+  font-size: 1rem;
+  padding-right: 80px;
+  color: var(--my-hover);
+  resize: none;
+}
+
+.btn-enviar {
+  background: var(--my-strong);
+  border-radius: 10px;
+  color: var(--my-textLigth);
+}
+
+/* ----------------------footer---------------------- */
+.footer-distributed {
+  background: var(--my-background);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: var(--my-strong);
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: var(--my-hover);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: var(--my-strong);
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--my-hover);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: var(--my-background);
+  color: var(--my-strong);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: var(--my-strong);
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: var(--my-hover);
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: var(--my-strong);
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: var(--my-hover);
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: var(--my-strong);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--my-hover);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--my-textLigth);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
+}
+.footer-distributed .footer-icons a:hover {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:var(--my-background);
+  border-radius: 2px;
+  font-size: 20px;
+  color:  var(--my-hover);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* ----------------------queries---------------------- */
+
+@media (max-width: 700px) {
+  html {
+    font-size: 65%;
+  }
+
+  /* navbar */
+  .navbar {
+    flex-direction: column;
+    font-size: 2.3em;
+  }
+
+  /* sections */
+  .hardware-container,
+  .devices-container,
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sofware-container,
+  .accessories-container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  /* imgs */
+  #hardwareImg,
+  #sofwareImg,
+  #devicesImg,
+  #accessoriesImg {
+    height: 300px;
+    width: 80%;
+  }
+
+  /* section contact */
+  #contactImg {
+    display: none;
+  }
+
+  #contact-text {
+    width: 85%;
+  }
+  #contact-text div {
+    margin-top: 20px;
+  }
+
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
